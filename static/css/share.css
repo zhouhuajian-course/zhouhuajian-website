@@ -1,0 +1,25 @@
+.share-wrap {
+    padding-bottom: 20px;
+}
+
+.share-wrap h5 {
+    padding: 20px;
+}
+
+.share-wrap .summary-table tr td:first-child {
+    padding: 5px 15px 5px 20px;
+}
+.share-wrap .summary-table a {
+    margin-right: 3px;
+}
+
+.share-wrap h6 {
+    padding: 20px;
+}
+.share-wrap .item-table {
+    padding: 0 0;
+
+}
+.share-wrap .item-table tr td:first-child {
+    padding: 3px 55px 3px 20px;
+}

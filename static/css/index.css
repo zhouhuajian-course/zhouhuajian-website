@@ -1,0 +1,49 @@
+.head-wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #252730;
+    color: #f3f6fd;
+    height: 50px;
+}
+
+.head {
+    margin: 0 auto;
+    width: 1000px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.head .icon {
+    margin-right: 3px;
+    height: 50px;
+    line-height: 55px;
+}
+
+.head .blank {
+    width: 60px;
+    height: 50px;
+}
+
+.head .nav a {
+    color: #f3f6fd;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    padding: 0 15px;
+}
+
+.main-wrap {
+    box-sizing: border-box;
+    width: 1000px;
+    margin: 70px auto 0 auto;
+    background: #ffffff;
+}
+
+.foot-wrap {
+    color: #626068;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}

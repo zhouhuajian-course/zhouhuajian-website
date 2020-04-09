@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+body {
+    background: #f3f6fd;
+}
+a {
+    color: #626068;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #06a0fa;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+.font-13 {
+    font-size: 13px;
+}
+.font-15 {
+    font-size: 15px;
+}
+.font-18 {
+    font-size: 18px;
+}
+.font-20 {
+    font-size: 20px;
+}
+.fixed {
+    position: fixed;
+}
+.relative {
+    position: relative;
+}
+.fl {
+    float: left;
+}
+
+.btn {
+    box-sizing: border-box;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 11px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn-green {
+    border-color: #bce5a5;
+    background: #ebfbe5;
+    color: #4fc61c;
+}
+.btn-green:hover {
+    border-color: #4fc61c;
+    background: #4fc61c;
+    color: #ffffff;
+}
+
+.btn-blue {
+     border-color: #3e96db;
+     background: #e8f3f9;
+     color: #3e96db;
+ }
+.btn-blue:hover {
+    border-color: #3e96db;
+    background: #3e96db;
+    color: #ffffff;
+}
+
+.btn-orange {
+    border-color: #ef9d2f;
+    background: #ffefe6;
+    color: #ef9d2f;
+}
+.btn-orange:hover {
+    border-color: #ef9d2f;
+    background: #ef9d2f;
+    color: #ffffff;
+}
+
+.btn-gray {
+    border-color: #111e69;
+    background: #e5e5ef;
+    color: #111e69;
+}
+.btn-gray:hover {
+    border-color: #111e69;
+    background: #111e69;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
