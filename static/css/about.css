@@ -1,0 +1,41 @@
+
+.about-wrap .person {
+    width: 440px;
+    height: 280px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.about-wrap .person-1 {
+    border-bottom: 1px solid #cccccc;
+}
+
+.about-wrap .person .intro {
+    width: 220px;
+    height: 280px;
+    float: left;
+    font-size: 13px;
+    line-height: 25px;
+}
+.about-wrap .person .intro strong {
+    font-size: 13px;
+    line-height: 25px;
+}
+.about-wrap .person .avatar {
+    width: 220px;
+    height: 220px;
+    float: left;
+}
+.about-wrap .person img {
+    display: block;
+    float: left;
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+}
+.about-wrap .person-1 img {
+    float: right;
+}
+.about-wrap .person-2 .intro {
+    box-sizing: border-box;
+    padding-left: 90px;
+}

@@ -1,0 +1,14 @@
+.donate-wrap {
+    padding: 20px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.donate-wrap .tip {
+    color: #888888;
+}
+.donate-wrap .donate {
+    padding: 20px 0;
+}
+.donate-wrap .donate a {
+    margin-right: 10px;
+}

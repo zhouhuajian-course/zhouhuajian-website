@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-size: 14px;
+    font-family: '微软雅黑', 'Microsoft JhengHei UI', '黑体',serif;
 }
 body {
     background: #f3f6fd;
@@ -38,6 +39,9 @@ a:hover {
 }
 .fl {
     float: left;
+}
+.display-none {
+    display: none;
 }
 
 .btn {
