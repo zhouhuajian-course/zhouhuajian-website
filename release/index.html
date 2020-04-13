@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset='utf-8' />
+
+<link rel='stylesheet' type='text/css' href='https://www.dowebok.com/demo/2014/98/animate.min.css' />
+
 <link rel='stylesheet' type='text/css' href='/static/css/global.css' />
 <link rel='stylesheet' type='text/css' href='/static/css/index.css' />
 <link rel='stylesheet' type='text/css' href='/static/css/share.css' />
@@ -12,21 +15,21 @@
 <body>
 <div class='head-wrap fixed'>
     <div class='head'>
-        <div class='icon fl font-18 font-bold'>
+        <div class='icon fl font-18 font-bold animated flash'>
             <svg class="bi bi-person" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/>
             </svg>
         </div>
-        <div class='web-name fl font-18 font-bold'>未来不是梦</div>
+        <div id='web-name' class='web-name fl font-18 font-bold hide'>未来不是梦</div>
         <div class='blank fl'></div>
-        <div class='nav fl font-15 font-bold'>
-            <a>分享</a>
-            <a>源码</a>
-            <a>关于</a>
-            <a>打赏</a>
+        <div id='nav' class='nav fl font-15 font-bold hide'>
+            <a class='nav-btn' page='share'>分享</a>
+            <a class='nav-btn' page='source-code'>源码</a>
+            <a class='nav-btn' page='about'>关于</a>
+            <a class='nav-btn' page='donate'>打赏</a>
         </div>
     </div>
-</div><div class='share-wrap main-wrap display-none'>
+</div><div class='share-wrap main-wrap hide'>
     <h5>开发知识分享</h5>
     <table class='summary-table'>
         <tr>
@@ -120,7 +123,7 @@
             </td>
         </tr>
     </table>
-</div><div class='main-wrap source-code-wrap display-none'>
+</div><div class='main-wrap source-code-wrap hide'>
     <h6>网站源码</h6>
     <p>HTML + CSS + Javascript + PHP + Smarty + JQuery + Composer<br />这是送给各位的一个小礼物<br />请笑纳</p>
     <h6>源码地址</h6>
@@ -152,7 +155,7 @@
 |   `-- source_code.htm    源码页面
 `-- .gitignore
 `-- index.php</pre>-->
-</div><div class='main-wrap about-wrap'>
+</div><div class='main-wrap about-wrap hide'>
     <div class='person person-1'>
         <div class='intro'>
             <strong>姓名</strong><br />
@@ -186,27 +189,7 @@
             ......此处省略2万字<br />
         </div>
     </div>
-    <!--<strong>姓名</strong><br />
-    周华健<br />
-    <strong>学校</strong><br />
-    汕头大学(重点本科)<br />
-    <strong>个人介绍</strong><br />
-    男 汉族 1992年<br />
-    广东河源人<br />
-    <strong>可炫耀的往事</strong><br />
-    北京百度总部网页搜索部 研发工程师<br />
-    北京百度分公司云平台部 研发工程师<br />
-    <br />
-    <strong>姓名</strong><br />
-    李远香<br />
-    <strong>学校</strong><br />
-    广东科技学院<br />
-    <strong>个人介绍</strong><br />
-    女 汉族 1994年<br />
-    广东梅州人<br />
-    <strong>可炫耀的往事</strong><br />
-    ......此处省略2万字<br />-->
-</div><div class='main-wrap donate-wrap display-none'>
+</div><div class='main-wrap donate-wrap hide'>
     为什么打赏？<br />
     更多的打赏 = 更多的钱<br />
     更多的钱允许我能买更多的咖啡<br />
@@ -216,21 +199,74 @@
     更多的知识因此你能赚更多的钱<br />
     更多的钱你就能给我更多的打赏<br />
     Hahahaha...<br />
-    <p class='tip font-13'>
+    <p class='tip'>
         (打赏的钱可能是各位辛辛苦苦赚的钱，打赏请谨慎)
     </p>
     <div class='donate'>
-        <a class='btn btn-orange'>打赏1元</a>
-        <a class='btn btn-orange'>打赏2元</a>
-        <a class='btn btn-orange'>打赏5元</a>
-        <a class='btn btn-orange'>打赏10元</a>
-        <a class='btn btn-orange'>打赏20元</a>
+        <a class='btn btn-orange donate-btn' money='1'>打赏1元</a>
+        <a class='btn btn-orange donate-btn' money='2'>打赏2元</a>
+        <a class='btn btn-orange donate-btn' money='5'>打赏5元</a>
+        <a class='btn btn-orange donate-btn' money='10'>打赏10元</a>
+        <a class='btn btn-orange donate-btn' money='20'>打赏20元</a>
     </div>
-</div><div class='foot-wrap font-13'>
+    <div id='qrcode-1-yuan' class='qrcode'>
+        <div>
+            <img alt='' src='/static/image/qrcode/alipay_1_yuan.png' />
+            <div class='label'>支付宝</div>
+        </div>
+        <div>
+            <img alt='' src='/static/image/qrcode/weixin_1_yuan.png' />
+            <div class='label'>微信</div>
+        </div>
+    </div>
+    <div id='qrcode-2-yuan' class='qrcode'>
+        <div>
+            <img alt='' src='/static/image/qrcode/alipay_2_yuan.png' />
+            <div class='label'>支付宝</div>
+        </div>
+        <div>
+            <img alt='' src='/static/image/qrcode/weixin_2_yuan.png' />
+            <div class='label'>微信</div>
+        </div>
+    </div>
+    <div id='qrcode-5-yuan' class='qrcode'>
+        <div>
+            <img alt='' src='/static/image/qrcode/alipay_5_yuan.png' />
+            <div class='label'>支付宝</div>
+        </div>
+        <div>
+            <img alt='' src='/static/image/qrcode/weixin_5_yuan.png' />
+            <div class='label'>微信</div>
+        </div>
+    </div>
+    <div id='qrcode-10-yuan' class='qrcode'>
+        <div>
+            <img alt='' src='/static/image/qrcode/alipay_10_yuan.png' />
+            <div class='label'>支付宝</div>
+        </div>
+        <div>
+            <img alt='' src='/static/image/qrcode/weixin_10_yuan.png' />
+            <div class='label'>微信</div>
+        </div>
+    </div>
+    <div id='qrcode-20-yuan' class='qrcode'>
+        <div>
+            <img alt='' src='/static/image/qrcode/alipay_20_yuan.png' />
+            <div class='label'>支付宝</div>
+        </div>
+        <div>
+            <img alt='' src='/static/image/qrcode/weixin_20_yuan.png' />
+            <div class='label'>微信</div>
+        </div>
+    </div>
+</div><div class='foot-wrap hide'>
     周华健 • 广东<br/>
     网站备案号：
-    <a class='font-13' href='http://www.beian.miit.gov.cn/' target='_blank'>
+    <a href='http://www.beian.miit.gov.cn/' target='_blank'>
         粤ICP备14037372号
     </a>
-</div></body>
+</div><script src='http://libs.baidu.com/jquery/2.1.1/jquery.min.js'></script>
+<script src='/static/js/index.js'></script>
+<script src='/static/js/donate.js'></script>
+</body>
 </html>

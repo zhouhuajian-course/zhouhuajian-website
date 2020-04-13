@@ -14,6 +14,7 @@ a {
 
 a:hover {
     color: #06a0fa;
+    cursor: pointer;
 }
 
 .font-bold {
@@ -40,16 +41,15 @@ a:hover {
 .fl {
     float: left;
 }
-.display-none {
+.hide {
     display: none;
 }
-
 .btn {
     box-sizing: border-box;
     padding: 2px 5px;
     border: 1px solid black;
     border-radius: 3px;
-    font-size: 11px;
+    font-size: 13px;
 }
 .btn:hover {
     cursor: pointer;

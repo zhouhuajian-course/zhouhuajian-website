@@ -13,11 +13,9 @@
     width: 220px;
     height: 280px;
     float: left;
-    font-size: 13px;
     line-height: 25px;
 }
 .about-wrap .person .intro strong {
-    font-size: 13px;
     line-height: 25px;
 }
 .about-wrap .person .avatar {

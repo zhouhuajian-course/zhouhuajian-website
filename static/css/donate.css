@@ -1,7 +1,6 @@
 .donate-wrap {
     padding: 20px;
     line-height: 25px;
-    font-size: 13px;
 }
 .donate-wrap .tip {
     color: #888888;
@@ -11,4 +10,37 @@
 }
 .donate-wrap .donate a {
     margin-right: 10px;
+}
+
+.donate-wrap .qrcode {
+    height: 140px;
+    display: none;
+}
+.donate-wrap .qrcode.active {
+    display: block;
+}
+
+.donate-wrap .qrcode div {
+    float: left;
+    margin-right: 20px;
+    width: 120px;
+}
+
+.donate-wrap .qrcode img {
+    float: left;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+.donate-wrap .qrcode .label {
+    float: left;
+    color: #888888;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+}
+.donate-wrap .donate .btn.active {
+    border-color: #ef9d2f;
+    background: #ef9d2f;
+    color: #ffffff;
 }
