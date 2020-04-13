@@ -1,3 +1,11 @@
+/**
+ * 首页JS
+ *
+ * @link    http://zhouhuajian.website
+ * @package zhouhuajian.website
+ * @author  zhouhuajian
+ * @version v1.0
+ */
 var webNames = [
     '未来不是梦',
     '有梦才会赢'
