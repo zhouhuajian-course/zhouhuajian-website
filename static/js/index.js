@@ -11,18 +11,18 @@ $(function() {
         }, 800);
     }, 500);
     setTimeout(function () {
-        $('#nav').show().addClass('animated bounceInRight');
+        $('#nav').show().addClass('animated bounce-in-right');
     }, 1300)
     setTimeout(function () {
-        $('.share-wrap').show().addClass('animated fadeInUp');
-        $('.foot-wrap').show().addClass('animated fadeInUp');
+        $('.share-wrap').show().addClass('animated fade-in-up fast');
+        $('.foot-wrap').show().addClass('animated fade-in-up fast');
     }, 1500)
 
    $('.nav-btn').click(function () {
         var page = $(this).attr('page');
         $('.main-wrap').hide();
         // $('.foot-wrap').hide();
-        $('.' + page + '-wrap').show().addClass('animated fadeInUp');
+        $('.' + page + '-wrap').show().addClass('animated fade-in-up fast');
         // $('.foot-wrap').show().addClass('animated fadeInUp');
    });
 });
