@@ -3,6 +3,7 @@ var webNames = [
     '有梦才会赢'
 ];
 $(function() {
+
     var index = Math.floor(Math.random() * webNames.length);
     $('#web-name').html(webNames[index]);
     setTimeout(function () {
@@ -18,11 +19,14 @@ $(function() {
         $('.foot-wrap').show().addClass('animated fade-in-up fast');
     }, 1500)
 
-   $('.nav-btn').click(function () {
+    $('.nav-btn').click(function () {
         var page = $(this).attr('page');
         $('.main-wrap').hide();
         // $('.foot-wrap').hide();
         $('.' + page + '-wrap').show().addClass('animated fade-in-up fast');
         // $('.foot-wrap').show().addClass('animated fadeInUp');
-   });
+    });
+    $('.head .link').click(function () {
+        location.reload();
+    });
 });
