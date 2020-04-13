@@ -38,6 +38,9 @@ a:hover {
 .relative {
     position: relative;
 }
+.absolute {
+    position: absolute;
+}
 .fl {
     float: left;
 }

@@ -19,13 +19,24 @@
     height: 50px;
     line-height: 55px;
 }
+.head .web-name-cover {
+    top: 0;
+    left: 20px;
+    background: #252730;
+    z-index: 10;
+    width: 150px;
+    height: 50px;
+}
 
 .head .blank {
     width: 60px;
     height: 50px;
 }
-
+.head .nav {
+    z-index: 20;
+}
 .head .nav a {
+    z-index: 20;
     font-size: 15px;
     font-weight: bold;
     color: #f3f6fd;
