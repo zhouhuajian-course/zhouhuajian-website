@@ -21,11 +21,11 @@ $(function() {
     }, 500);
     setTimeout(function () {
         $('#nav').show().addClass('animated bounce-in-right');
-    }, 1300)
+    }, 1300);
     setTimeout(function () {
         $('.share-wrap').show().addClass('animated fade-in-up fast');
         $('.foot-wrap').show().addClass('animated fade-in-up fast');
-    }, 1500)
+    }, 1500);
 
     $('.nav-btn').click(function () {
         var page = $(this).attr('page');
