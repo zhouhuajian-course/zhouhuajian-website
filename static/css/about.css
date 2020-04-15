@@ -6,41 +6,27 @@
  * @author  zhouhuajian
  * @version v1.0
  */
-.about-wrap .person {
-    width: 440px;
-    height: 280px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-.about-wrap .person-1 {
-    border-bottom: 1px solid #cccccc;
-}
+.about-wrap {
 
-.about-wrap .person .intro {
-    width: 220px;
-    height: 280px;
+    height: 420px;
+}
+.about-wrap .intro {
+    box-sizing: border-box;
+    width: 500px;
     float: left;
-    line-height: 25px;
+    padding: 20px 0 20px 270px;
+    line-height: 27px;
 }
-.about-wrap .person .intro strong {
-    line-height: 25px;
-}
-.about-wrap .person .avatar {
-    width: 220px;
-    height: 220px;
+.about-wrap .avatar {
+    box-sizing: border-box;
+    width: 500px;
+    padding: 20px 0 20px 80px;
     float: left;
 }
-.about-wrap .person img {
+.about-wrap .avatar img {
     display: block;
     float: left;
     width: 130px;
     height: 130px;
     border-radius: 20px;
-}
-.about-wrap .person-1 img {
-    float: right;
-}
-.about-wrap .person-2 .intro {
-    box-sizing: border-box;
-    padding-left: 90px;
 }

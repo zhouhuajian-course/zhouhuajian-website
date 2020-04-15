@@ -60,18 +60,12 @@
     padding: 0 15px;
 }
 
-/*
-.head .nav a:hover {
-    animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-}
-*/
-
 .main-wrap {
     box-sizing: border-box;
     width: 1000px;
     margin: 70px auto 0 auto;
     background: #ffffff;
+    border-radius: 3px;
 }
 
 .foot-wrap {

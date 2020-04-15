@@ -13,6 +13,8 @@ $(function() {
     ];
     var index = Math.floor(Math.random() * webNames.length);
     $('#web-name').html(webNames[index]);
+
+    // 开场动画
     setTimeout(function () {
         $('#web-name-cover').animate({
             left: '170px'
