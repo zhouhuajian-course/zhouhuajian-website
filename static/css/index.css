@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #252730;
+    background: #20123a;
     color: #f3f6fd;
     height: 50px;
 }
@@ -36,7 +36,7 @@
 .head .web-name-cover {
     top: 0;
     left: 20px;
-    background: #252730;
+    background: #20123a;
     z-index: 10;
     width: 150px;
     height: 50px;
@@ -59,48 +59,13 @@
     height: 50px;
     padding: 0 15px;
 }
-@keyframes nav-btn-keyframes {
-    0%   { color: #f3f6fd; }
-    25%  { color: red; }
-    50%  { color: yellow; }
-    75%  { color: green; }
-    100% { color: #f3f6fd; }
-}
+
 /*
-@keyframes nav-btn-keyframes {
-    0%   { color: #f3f6fd; }
-    16%  { color: red; }
-    32%  { color: #f3f6fd; }
-    48%  { color: yellow; }
-    64% { color: #f3f6fd; }
-    80%  { color: rgb(53, 154, 234); }
-    100% { color: #f3f6fd; }
-}
-@-moz-keyframes nav-btn-keyframes {
-    0%   {background: red;}
-    25%  {background: yellow;}
-    50%  {background: blue;}
-    100% {background: green;}
-}
-@-webkit-keyframes nav-btn-keyframes {
-    0%   {background: red;}
-    25%  {background: yellow;}
-    50%  {background: blue;}
-    100% {background: green;}
-}
-@-o-keyframes nav-btn-keyframes {
-    0%   {background: red;}
-    25%  {background: yellow;}
-    50%  {background: blue;}
-    100% {background: green;}
-}*/
 .head .nav a:hover {
-    animation: nav-btn-keyframes 5s infinite;
-    /*
-    -moz-animation: nav-btn-keyframes 5s infinite;
-    -webkit-animation: nav-btn-keyframes 5s infinite;
-    -o-animation: nav-btn-keyframes 5s infinite;*/
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
 }
+*/
 
 .main-wrap {
     box-sizing: border-box;
