@@ -6,12 +6,11 @@
  * @author  zhouhuajian
  * @version v1.0
  */
-var webNames = [
-    '未来不是梦',
-    '有梦才会赢'
-];
 $(function() {
-
+    var webNames = [
+        '未来不是梦',
+        '有梦才会赢'
+    ];
     var index = Math.floor(Math.random() * webNames.length);
     $('#web-name').html(webNames[index]);
     setTimeout(function () {
