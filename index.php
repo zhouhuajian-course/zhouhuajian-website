@@ -39,7 +39,8 @@ echo $index_html;
  * @param string $index_html    首页的HTML
  * @return void
  */
-function combine_compress_css(&$index_html) {
+function combine_compress_css(&$index_html)
+{
     // 匹配CSS资源文件标签
     $pattern = "#<link .* href='(/static/css/.*.css)'\s?/>#";
     preg_match_all($pattern, $index_html, $matches);
@@ -82,7 +83,8 @@ function combine_compress_css(&$index_html) {
  * @param string $index_html    首页的HTML
  * @return void
  */
-function combine_compress_js(&$index_html) {
+function combine_compress_js(&$index_html)
+{
     // 匹配JS资源文件标签
     $pattern = "#<script src='(/static/js/.*.js)'></script>#";
     preg_match_all($pattern, $index_html, $matches);
@@ -126,7 +128,8 @@ function combine_compress_js(&$index_html) {
  * @param string $index_html    首页的HTML
  * @return void
  */
-function combine_img(&$index_html) {
+function combine_img(&$index_html)
+{
     // 匹配IMG资源文件
     $pattern = "#<img.*?src='(/static/image/.*?)'.*?/>#";
     preg_match_all($pattern, $index_html, $matches);
@@ -152,6 +155,11 @@ function combine_img(&$index_html) {
  * @param string $index_html    首页的HTML
  * @return void
  */
-function compress_html(&$index_html) {
-
+function compress_html(&$index_html)
+{
+    // 去掉注释 去掉换行符 去掉多余空格
+    $index_html = preg_replace("#<!--.*?-->#s", '', $index_html);
+    $index_html = preg_replace("#[\n\r]#", '', $index_html);
+    $index_html = preg_replace("#\s+#", ' ', $index_html);
+    $index_html = preg_replace("# ?([</>]) ?#", '$1', $index_html);
 }
