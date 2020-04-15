@@ -47,8 +47,3 @@
     height: 20px;
     text-align: center;
 }
-.donate-wrap .donate .btn.active {
-    border-color: #ef9d2f;
-    background: #ef9d2f;
-    color: #ffffff;
-}

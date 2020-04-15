@@ -55,6 +55,8 @@ a:hover {
 .hide {
     display: none;
 }
+
+/** 按钮 **/
 .btn {
     box-sizing: border-box;
     padding: 2px 5px;
@@ -70,7 +72,7 @@ a:hover {
     background: #ebfbe5;
     color: #218838;
 }
-.btn-green:hover {
+.btn-green:hover, .btn-green.active {
     border-color: #218838;
     background: #218838;
     color: #ffffff;
@@ -81,7 +83,7 @@ a:hover {
      background: #e8f3f9;
      color: #0069d9;
  }
-.btn-blue:hover {
+.btn-blue:hover, .btn-blue.active {
     border-color: #0069d9;
     background: #0069d9;
     color: #ffffff;
@@ -92,7 +94,7 @@ a:hover {
     background: #ffefe6;
     color: #d37505;
 }
-.btn-orange:hover {
+.btn-orange:hover, .btn-orange.active {
     border-color: #d37505;
     background: #d37505;
     color: #ffffff;
@@ -103,12 +105,24 @@ a:hover {
     background: #e5e5ef;
     color: #2b3268;
 }
-.btn-gray:hover {
+.btn-gray:hover, .btn-gray.active {
     border-color: #2b3268;
     background: #2b3268;
     color: #ffffff;
 }
 
+.btn-red {
+    border-color: #c82333;
+    background: #ffe6e8;
+    color: #c82333;
+}
+.btn-red:hover, .btn-red.active {
+    border-color: #c82333;
+    background: #c82333;
+    color: #ffffff;
+}
+
+/** 动画 **/
 @-webkit-keyframes flash {
     from,
     50%,
