@@ -17,7 +17,8 @@ $(function() {
     // 开场动画
     setTimeout(function () {
         $('#web-name-cover').animate({
-            left: '170px'
+            left: '170px',
+            width: '0px'
         }, 1500);
     }, 500);
     setTimeout(function () {

@@ -18,7 +18,7 @@
     padding: 5px 15px 5px 20px;
 }
 .share-wrap .summary-table a {
-    margin-right: 3px;
+    margin-right: 8px;
 }
 
 .share-wrap h6 {
@@ -26,8 +26,10 @@
 }
 .share-wrap .item-table {
     padding: 0 0;
-
 }
 .share-wrap .item-table tr td:first-child {
     padding: 3px 55px 3px 20px;
+}
+.share-wrap .item-table a {
+    margin-right: 8px;
 }
