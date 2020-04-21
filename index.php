@@ -27,6 +27,8 @@ if (!isset($_GET['origin']))
     combine_img($index_html);
     // 压缩html
     compress_html($index_html);
+    // 追加额外的内容
+    append_extra_content($index_html);
 }
 
 // 生成发布用的html文件
@@ -162,4 +164,46 @@ function compress_html(&$index_html)
     $index_html = preg_replace("#[\n\r]#", '', $index_html);
     $index_html = preg_replace("#\s+#", ' ', $index_html);
     $index_html = preg_replace("# ?([</>]) ?#", '$1', $index_html);
+}
+
+/**
+ * 追加额外的内容
+ *
+ * @param string $index_html    首页的HTML
+ * @return void
+ */
+function append_extra_content(&$index_html) {
+    $extra_content = <<<EXTRA_CONTENT
+
+<!--
+
+
+
+　　　　　　　　　　　　　　　　　■　　■　　　　　　　　　　　　　　　　　　　
+　■■■■■■■■■■■　　　　■■　　■　　■■　　　■■■■■■■■■■　　
+　■　　　　■　　　　■　　　　■　　　■■■　　　　■　　■　　　■　　■　　
+　■　■■■■■■■　■　　■■■　■■■　　　　　　■　　■　■■■■■■■　
+　■　　　　■　　　　■　　■　■　　　■　　　　　　■　■　　　　■　　■　　
+　■　■■■■■■■　■　　　　■　　　■■■■■　■■■■■■■■■■■■　　
+　■　　　　　　　　　■　　　　　　　　　　　　　　　■　　　■　　■　　　　　
+　■　■■■■■■■　■　　　　　　　■　　　　　　　■　■　■　■■■■■　　
+　■　■　　　　　■　■　　■■■■■■■■■■■■　■　■■　　　■　　　　　
+　■　■■　　　　■　■　　　　　　　■　　　　　　　■　　■　■■■■■■　　
+　■　　■■■■■　　■　　　　　　　■　　　　　　　■　　■■　　■　　　　　
+■■　　　　　　　■■■　　　　　　　■　　　　　　　■　■　　■■■■■■■　
+　　　　　　　　　　　　　　　　　　　■　　　　　　　　　　　　　　　　　　　　
+
+
+
+Hi, nice to meet you.
+welcome to the http://zhouhuajian.website,
+hope you can learn a lot of knowledge here,
+hope you can become a very skilled person as soon as possible,
+best wishes to you my friend.
+
+
+
+-->
+EXTRA_CONTENT;
+    $index_html .= $extra_content;
 }

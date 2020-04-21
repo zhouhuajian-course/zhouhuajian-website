@@ -9,11 +9,15 @@
 $(function() {
     var webNames = [
         '未来不是梦',
-        '有梦才会赢'
+        '读书方知学识浅',
+        '梅花香自苦寒来',
+        '书山有路勤为径',
+        '学海无涯苦作舟',
+        '十年寒窗无人问',
     ];
     var index = Math.floor(Math.random() * webNames.length);
     $('#web-name').html(webNames[index]);
-    $('#title').html(webNames[index]);
+    $('#title').html(webNames[index] + ' | 周华健');
     // 开场动画
     setTimeout(function () {
         $('#web-name-cover').animate({
