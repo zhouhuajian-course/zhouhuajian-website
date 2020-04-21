@@ -35,6 +35,15 @@ if (!isset($_GET['origin']))
 file_put_contents(__DIR__ . '/release/index.html', $index_html);
 echo $index_html;
 
+
+
+
+
+
+
+
+
+
 /**
  * 整合和压缩CSS
  *
@@ -166,6 +175,15 @@ function compress_html(&$index_html)
     $index_html = preg_replace("# ?([</>]) ?#", '$1', $index_html);
 }
 
+
+
+
+
+
+
+
+
+
 /**
  * 追加额外的内容
  *
@@ -198,7 +216,6 @@ function append_extra_content(&$index_html) {
 Hi, nice to meet you.
 welcome to the http://zhouhuajian.website,
 hope you can learn a lot of knowledge here,
-hope you can become a very skilled person as soon as possible,
 best wishes to you my friend.
 
 
