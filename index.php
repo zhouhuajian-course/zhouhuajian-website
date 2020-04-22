@@ -193,6 +193,10 @@ function compress_html(&$index_html)
 function append_extra_content(&$index_html) {
     $extra_content = <<<EXTRA_CONTENT
 
+
+
+
+
 <!--
 
 
