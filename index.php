@@ -194,11 +194,7 @@ function append_extra_content(&$index_html) {
     $extra_content = <<<EXTRA_CONTENT
 
 
-
-
-
-<!--
-
+<!--—————————————————————————————————————
 
 
 　　　　　　　　　　　　　　　　　■　　■　　　　　　　　　　　　　　　　　　　
@@ -216,15 +212,13 @@ function append_extra_content(&$index_html) {
 　　　　　　　　　　　　　　　　　　　■　　　　　　　　　　　　　　　　　　　　
 
 
-
 Hi, nice to meet you.
 welcome to the http://zhouhuajian.website,
 hope you can learn a lot of knowledge here,
 best wishes to you my friend.
 
 
-
--->
+—————————————————————————————————————-->
 EXTRA_CONTENT;
     $index_html .= $extra_content;
 }
