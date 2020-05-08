@@ -1,0 +1,27 @@
+/**
+ * 源码页CSS
+ *
+ * @link    http://zhouhuajian.website
+ * @package zhouhuajian.website
+ * @author  zhouhuajian
+ * @version v1.0
+ */
+.source-code-wrap {
+    padding: 20px;
+    line-height: 30px;
+}
+.source-code-wrap h6 {
+    text-align: center;
+}
+.source-code-wrap p {
+    text-align: center;
+}
+.source-code-wrap pre {
+    font-family: Consolas, 'Courier New', serif;
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    line-height: 18px;
+    background: #cccccc;
+}
