@@ -43,6 +43,18 @@
     color: #254c5f;
 }
 .head-wrap .nav a:hover {
-    color: rgba(37, 76, 95, 0.4);
+    -webkit-animation: nav-btn-animate 2.67s linear 0s infinite;
+    animation: nav-btn-animate 2.67s linear 0s infinite;
 }
+@-webkit-keyframes nav-btn-animate {
+    50% {
+        color: rgba(37, 76, 95, 0.4);
+    }
+}
+@keyframes nav-btn-animate {
+    50% {
+        color: rgba(37, 76, 95, 0.4);
+    }
+}
+
 
