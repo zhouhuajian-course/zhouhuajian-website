@@ -32,7 +32,7 @@ if (!isset($_GET['origin']))
 }
 
 // 生成发布用的html文件
-file_put_contents(__DIR__ . '/release/index.html', $index_html);
+// file_put_contents(__DIR__ . '/release/index.html', $index_html);
 echo $index_html;
 
 
