@@ -1,21 +1,37 @@
 {**
- * 首页
- *
- * @link    http://zhouhuajian.website
- * @package zhouhuajian.website
- * @author  zhouhuajian
- * @version v2.0
- *}
+* 首页
+*
+* @link    http://zhouhuajian.website
+* @package zhouhuajian.website
+* @author  zhouhuajian
+* @version v1.0
+*}
 <!DOCTYPE html>
 <html>
 <head>
-<title id="title"></title>
-<meta charset="utf-8" />
-<meta name="description" content="周华健发布视频教程的个人网站，旨在帮助各位获得开发知识和技能，并能学以致用！" />
-<meta name="keywords" content="周华健、个人网站、视频教程、知识分享、后端开发、编程语言、前端开发、云课堂" />
-<link rel="icon" type="image/png" sizes="50x50" href="/favicon.ico" />
+ <title id='title'></title>
+ <meta charset='utf-8' />
+ <meta name='description' content='周华健发布视频教程的个人网站，旨在帮助各位获得开发知识和技能，并能学以致用！' />
+ <meta name='keywords' content='周华健、个人网站、视频教程、知识分享、后端开发、编程语言、前端开发、云课堂' />
+ <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
+ <link rel='stylesheet' type='text/css' href='/static/css/global.css' />
+ <link rel='stylesheet' type='text/css' href='/static/css/index.css' />
+ <link rel='stylesheet' type='text/css' href='/static/css/share.css' />
+ <link rel='stylesheet' type='text/css' href='/static/css/about.css' />
+ <link rel='stylesheet' type='text/css' href='/static/css/source_code.css' />
+ <link rel='stylesheet' type='text/css' href='/static/css/donate.css' />
 </head>
 <body>
-{include file="head.htm"}
+{include file='head.htm'}
+{include file='share.htm'}
+{include file='about.htm'}
+{include file='source_code.htm'}
+{include file='donate.htm'}
+{include file='foot.htm'}
+<script src='/static/js/jquery-3.5.0.min.js'></script>
+<script src='/static/js/index.js'></script>
+<script src='/static/js/about.js'></script>
+<script src='/static/js/donate.js'></script>
+<script src='/static/js/baidu.stat.js'></script>
 </body>
 </html>

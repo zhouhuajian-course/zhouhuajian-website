@@ -1,0 +1,48 @@
+/**
+ * 通用头部CSS
+ *
+ * @link    http://zhouhuajian.website
+ * @package zhouhuajian.website
+ * @author  zhouhuajian
+ * @version v1.0
+ */
+.head-wrap {
+    float: left;
+    box-sizing: border-box;
+    padding: 15px 0;
+    width: 100%;
+    min-width: 1000px;
+    height: 90px;
+    background: #dea787;
+    color: #707075;
+}
+
+.head-wrap .logo {
+    float: left;
+    font-family: 华文隶书, sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #264c5f;
+    padding: 0 26px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.head-wrap .nav {
+    box-sizing: border-box;
+    height: 60px;
+    padding: 15px;
+    float: right;
+}
+.head-wrap .nav a {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    font-weight: 800;
+    color: #254c5f;
+}
+.head-wrap .nav a:hover {
+    color: rgba(37, 76, 95, 0.4);
+}
+
