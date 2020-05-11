@@ -1,8 +1,13 @@
 /**
- * 首页CSS
+ * index CSS
  *
  * @link    http://zhouhuajian.website
  * @package zhouhuajian.website
  * @author  zhouhuajian
  * @version v1.0
  */
+.main-wrap {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
