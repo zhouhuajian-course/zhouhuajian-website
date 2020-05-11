@@ -67,3 +67,13 @@
     border: 15px solid white;
     width: 33.33%;
 }
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .home-wrap .content1 {
+        padding: 0;
+    }
+    .home-wrap .content2 .video-share {
+        width: 100%;
+    }
+}
