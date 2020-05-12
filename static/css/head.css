@@ -13,6 +13,7 @@
     width: 100%;
     background: #dea787;
     color: #707075;
+    overflow-x: hidden;
 }
 
 .head-wrap .logo {

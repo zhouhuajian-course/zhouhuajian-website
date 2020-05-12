@@ -1,0 +1,46 @@
+/**
+ * index JS
+ *
+ * @link    http://zhouhuajian.website
+ * @package zhouhuajian.website
+ * @author  zhouhuajian
+ * @version v1.0
+ */
+$(function() {
+});
+
+// 路由系统
+var pages = [
+    'home',
+    'video-share',
+    'about',
+    'source-code'
+];
+function hashchange() {
+    var re = /^#([a-z\-]+)(\/[a-z\-]+)?$/;
+    var matches = location.hash.match(re);
+    // 默认首页
+    var page = 'home';
+    // 找到匹配并且页面正确
+    if (matches !== null
+        && pages.indexOf(matches[1]) !== -1
+    ) {
+        page = matches[1];
+    }
+    // 访问页面
+    $('.main-wrap').hide();
+    $('#foot-wrap').hide();
+    if (page !== 'home') {
+        $('#' + page + '-wrap').fadeIn(100);
+    } else {
+        $('#' + page + '-wrap').show();
+    }
+    // 关于和源码页面去掉尾部
+    if (['about', 'source-code'].indexOf(page) === -1) {
+        $('#foot-wrap').show();
+    }
+}
+// 绑定hashchange处理函数
+// 页面第一次加载调用一次
+window.onhashchange = hashchange;
+hashchange();

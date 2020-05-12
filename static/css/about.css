@@ -1,0 +1,44 @@
+/**
+ * about CSS
+ *
+ * @link    http://zhouhuajian.website
+ * @package zhouhuajian.website
+ * @author  zhouhuajian
+ * @version v1.0
+ */
+.about-wrap {
+    float: left;
+    box-sizing: border-box;
+    padding: 20px 0;
+    max-width: 600px;
+}
+.about-wrap .intro {
+    float: left;
+    width: 50%;
+}
+.about-wrap .intro .label {
+    float: left;
+    box-sizing: border-box;
+    padding: 20px 0 0 20px;
+    width: 100%;
+}
+.about-wrap .intro .content {
+    float: left;
+    box-sizing: border-box;
+    padding: 20px 0 0 20px;
+    width: 100%;
+}
+.about-wrap .avatar {
+    float: left;
+    box-sizing: border-box;
+    border: 20px solid white;
+    border-radius: 35px;
+    width: 50%;
+}
+
+/* 响应式设计 */
+@media (max-width: 500px) {
+    .about-wrap .avatar {
+        width: 100%;
+    }
+}

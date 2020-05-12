@@ -11,16 +11,41 @@
     padding: 0;
     font-size: 14px;
     line-height: 14px;
+    color: #254c5f;
     font-family: 微软雅黑, Metropolis, Inter, X-LocaleSpecific, sans-serif;
 }
 
-html, body {
+ul li {
+    list-style-type:none;
+}
 
-}
-.head-wrap {
-    overflow-x: hidden;
-}
 a {
     cursor: pointer;
     text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+/** 按钮 **/
+.btn {
+    box-sizing: border-box;
+    padding: 3px 6px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 13px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn-deep-blue {
+    border-color: #254c5f;
+    background: #ffffff;
+    color: #254c5f;
+}
+.btn-deep-blue:hover {
+    border-color: #254c5f;
+    background-color: #254c5f;
+    color: #ffffff;
 }
