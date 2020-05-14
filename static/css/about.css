@@ -9,7 +9,7 @@
 .about-wrap {
     float: left;
     box-sizing: border-box;
-    padding: 20px 0;
+    padding: 50px 0;
     max-width: 600px;
 }
 .about-wrap .intro {
@@ -19,13 +19,13 @@
 .about-wrap .intro .label {
     float: left;
     box-sizing: border-box;
-    padding: 20px 0 0 20px;
+    padding: 25px 0 0 25px;
     width: 100%;
 }
 .about-wrap .intro .content {
     float: left;
     box-sizing: border-box;
-    padding: 20px 0 0 20px;
+    padding: 25px 0 0 25px;
     width: 100%;
 }
 .about-wrap .avatar {

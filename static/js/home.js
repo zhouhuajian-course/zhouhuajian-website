@@ -10,8 +10,10 @@ $(function() {
     $(window).resize(function () {
         bannerResize();
     });
+    $(window).scroll(function () {
+        bannerResize();
+    });
 });
-
 
 bannerResize();
 
@@ -26,10 +28,20 @@ function bannerResize() {
     );
     // 调整高度 沾满窗口
     $banner.height(bannerHeight + 'px');
-    // 调整背景图片大小
+
+    var backgroundPositionY;
+
+    // 调整背景图片大小和垂直位置
     if ((bannerWidth / bannerHeight) > (1920 / 1080)) {
         $banner.css('background-size', '100% auto');
+        backgroundPositionY = - ((bannerWidth * 1080 / 1920) - bannerHeight) / 2;
     } else {
         $banner.css('background-size', 'auto 100%');
+        backgroundPositionY = 0;
     }
+
+    // 滚动条滚动像素
+    var scrollTop = $('html')[0].scrollTop;
+    backgroundPositionY += scrollTop / 2;
+    $banner.css('background-position-y', backgroundPositionY + 'px');
 }

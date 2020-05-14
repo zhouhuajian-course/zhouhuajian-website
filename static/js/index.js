@@ -35,6 +35,7 @@ function hashchange() {
         $('#' + page + '-wrap').fadeIn(100);
     } else {
         $('#' + page + '-wrap').show();
+        bannerResize();
     }
     // 首页和视频分享页面显示尾部
     if (['home', 'video-share'].indexOf(page) !== -1) {
