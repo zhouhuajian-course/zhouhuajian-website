@@ -13,6 +13,7 @@ $(function() {
 var pages = [
     'home',
     'video-share',
+    'poetry',
     'about',
     'source-code'
 ];
@@ -35,8 +36,8 @@ function hashchange() {
     } else {
         $('#' + page + '-wrap').show();
     }
-    // 关于和源码页面去掉尾部
-    if (['about', 'source-code'].indexOf(page) === -1) {
+    // 首页和视频分享页面显示尾部
+    if (['home', 'video-share'].indexOf(page) !== -1) {
         $('#foot-wrap').show();
     }
 }

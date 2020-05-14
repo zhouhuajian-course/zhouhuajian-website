@@ -14,3 +14,13 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
+// 控制台个性化日志
+console.log(
+    '\n' +
+    '又一次莫名地倚靠窗前\n' +
+    '往事如风如烟若隐若现\n' +
+    '那年那月的那一天\n' +
+    '她轻挥小手说再见\n\n' +
+    '—— zhouhuajian\n' +
+    '—— 原创诗句 创作于2020年05月\n\n'
+);

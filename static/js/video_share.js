@@ -21,7 +21,7 @@ function videoWrapResize() {
         1000,
         windowWidth
     );
-    var $videoShareWrap = $('#video-share-wrap');
+    var $videoShareWrap = $('#video_share-wrap');
     $videoShareWrap.width(width + 'px');
     if (width === 1000) {
         var marginLeft = (windowWidth - 1000) / 2;

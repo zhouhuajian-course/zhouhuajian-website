@@ -15,21 +15,21 @@ $smarty = new Smarty();
 $smarty->setTemplateDir(__DIR__ . '/template');
 $smarty->setCompileDir(__DIR__ . '/data/template/compile');
 $index_html = $smarty->fetch('index.htm');
-//
-//// 默认整合压缩 CSS JS IMG HTML
-//if (!isset($_GET['origin']))
-//{
-//    // 整合压缩CSS
-//    combine_compress_css($index_html);
-//    // 整合压缩JS
-//    combine_compress_js($index_html);
-//    // 整合IMG
-//    combine_img($index_html);
-//    // 压缩html
-//    compress_html($index_html);
-//    // 追加额外的内容
-//    append_extra_content($index_html);
-//}
+
+// 默认整合压缩 CSS JS IMG HTML
+if (!isset($_GET['origin']))
+{
+    // 整合压缩CSS
+    combine_compress_css($index_html);
+    // 整合压缩JS
+    combine_compress_js($index_html);
+    // 整合IMG
+    combine_img($index_html);
+    // 压缩html
+    compress_html($index_html);
+    // 追加额外的内容
+    append_extra_content($index_html);
+}
 
 // 生成发布用的html文件
 // file_put_contents(__DIR__ . '/release/index.html', $index_html);
@@ -53,7 +53,7 @@ echo $index_html;
 function combine_compress_css(&$index_html)
 {
     // 匹配CSS资源文件标签
-    $pattern = "#<link .* href='(/static/css/.*.css)'\s?/>#";
+    $pattern = '#<link .* href="(/static/css/.*.css)"\s?/>#';
     preg_match_all($pattern, $index_html, $matches);
     // CSS内容
     $css_content = '';
@@ -97,7 +97,7 @@ function combine_compress_css(&$index_html)
 function combine_compress_js(&$index_html)
 {
     // 匹配JS资源文件标签
-    $pattern = "#<script src='(/static/js/.*.js)'></script>#";
+    $pattern = '#<script src="(/static/js/.*.js)"></script>#';
     preg_match_all($pattern, $index_html, $matches);
     // JS内容
     $js_content = '';
@@ -142,7 +142,8 @@ function combine_compress_js(&$index_html)
 function combine_img(&$index_html)
 {
     // 匹配IMG资源文件
-    $pattern = "#<img.*?src='(/static/image/.*?)'.*?/>#";
+    // $pattern = '#<img.*?src="(/static/image/.*?)".*?/>#';
+    $pattern = '#"(/static/image/.*?)"#';
     preg_match_all($pattern, $index_html, $matches);
 
     // 遍历每个图片标签
@@ -212,10 +213,7 @@ function append_extra_content(&$index_html) {
 　　　　　　　　　　　　　　　　　　　■　　　　　　　　　　　　　　　　　　　　
 
 
-Hi, nice to meet you.
-welcome to the http://zhouhuajian.website,
-hope you can learn a lot of knowledge here,
-best wishes to you my friend.
+人生若只如初见 何事秋风悲画扇
 
 
 —————————————————————————————————————-->
