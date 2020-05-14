@@ -41,6 +41,13 @@ function hashchange() {
     if (['home', 'video-share'].indexOf(page) !== -1) {
         $('#foot-wrap').show();
     }
+    // 视频分享页 处理锚点效果
+    if (page === 'video-share' && matches[0].indexOf('/') !== -1) {
+        $(document).scrollTop(function () {
+            var elem = document.getElementById(matches[1] + matches[2]);
+            return $(elem).offset().top;
+        });
+    }
 }
 // 绑定hashchange处理函数
 // 页面第一次加载调用一次
