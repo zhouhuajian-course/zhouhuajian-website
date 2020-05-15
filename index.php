@@ -9,6 +9,17 @@
  * @author  zhouhuajian
  * @version v1.0
  */
+/**
+ * HTTP/1.1 200 OK
+Server: nginx/1.14.0 (Ubuntu)
+Date: Thu, 14 May 2020 18:17:23 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Expires: Thu, 31 Dec 2037 23:55:55 GMT
+Cache-Control: max-age=315360000
+Content-Encoding: gzip
+ */
 error_reporting(E_ALL);
 include_once __DIR__ . '/library/smarty-3.1.34/libs/Smarty.class.php';
 $smarty = new Smarty();
@@ -31,8 +42,8 @@ if (!isset($_GET['origin']))
     append_extra_content($index_html);
 }
 
-// 生成发布用的html文件
-// file_put_contents(__DIR__ . '/release/index.html', $index_html);
+// 生成缓存用的html文件
+file_put_contents(__DIR__ . '/index.html', $index_html);
 echo $index_html;
 
 

@@ -1,3 +1,4 @@
 /.idea
 /data/template/compile/*
 !/data/template/compile/.gitkeep
+/index.html
