@@ -9,17 +9,6 @@
  * @author  zhouhuajian
  * @version v1.0
  */
-/**
- * HTTP/1.1 200 OK
-Server: nginx/1.14.0 (Ubuntu)
-Date: Thu, 14 May 2020 18:17:23 GMT
-Content-Type: text/html; charset=UTF-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Expires: Thu, 31 Dec 2037 23:55:55 GMT
-Cache-Control: max-age=315360000
-Content-Encoding: gzip
- */
 error_reporting(E_ALL);
 include_once __DIR__ . '/library/smarty-3.1.34/libs/Smarty.class.php';
 $smarty = new Smarty();
@@ -28,7 +17,7 @@ $smarty->setCompileDir(__DIR__ . '/data/template/compile');
 $index_html = $smarty->fetch('index.htm');
 
 // 默认整合压缩 CSS JS IMG HTML
-if (!isset($_GET['origin']))
+if (!isset($_GET['original']))
 {
     // 整合压缩CSS
     combine_compress_css($index_html);

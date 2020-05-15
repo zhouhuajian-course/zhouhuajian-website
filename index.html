@@ -1,11 +1,56 @@
-{**
- * 视频分享页
- *
- * @link    http://zhouhuajian.website
- * @package zhouhuajian.website
- * @author  zhouhuajian
- * @version v1.0
- *}
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title"></title>
+<meta charset="utf-8" />
+<meta name="description" content="周华健个人网站" />
+<meta name="keywords" content="周华健、个人网站、视频分享、网站开发知识分享、软件开发知识分享" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="50x50" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/static/css/global.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/head.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/home.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/video_share.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/poetry.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/about.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/source_code.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/foot.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/static/css/animate-4.0.0.min.css" /> -->
+</head>
+<body>
+<script src="/static/js/jquery-3.5.0.min.js"></script>
+<div id="head-wrap" class="head-wrap">
+    <a id="logo" class="logo animate__animated animate__flash" href="/" target="_self">zhou hua jian</a>
+    <div class="nav animate__animated animate__fadeInRight animate__delay-1s">
+        <a href="/#home">首页</a>
+        <a href="/#video-share">视频分享</a>
+        <a href="/#poetry">诗词</a>
+        <a href="/#about">关于</a>
+        <a href="/#source-code">网站源码</a>
+    </div>
+</div>
+<!-- 通用头部结束 --><div id="home-wrap" class="main-wrap home-wrap hide">
+    <div id="banner" class="banner"></div>
+    <!-- banner图结束 -->
+    <div class="home-content">
+        <h1 class="title">这一切，才刚刚开始</h1>
+        <div class="content1">以往的学习经历记忆尤新，凌晨到深夜，一天又一天。忘不了逃课学习网络视频教程，忘不了开发好东西向同学炫耀，忘不了那一杯一杯的咖啡。<br />制作视频教程，分享知识，思考已久，蓄势待发。<br />而这些那些，一切的一切，才刚刚开始。</div>
+    </div>
+    <div class="home-content">
+        <h1 class="title">视频分享</h1>
+        <h3 class="sub-title">计算机基础 | 开发语言 | 开发软件 | 计算机网络</h3>
+        <div class="content2">
+            <a href="#video-share/personal-website"><img class="video-share" alt="" src="/static/image/video_share/personal_website.jpg" /></a>
+            <a href="#video-share/java"><img class="video-share" alt="" src="/static/image/video_share/java.jpg" /></a>
+            <a href="#video-share/php"><img class="video-share" alt="" src="/static/image/video_share/php.jpg" /></a>
+            <a href="#video-share/python"><img class="video-share" alt="" src="/static/image/video_share/python.jpg" /></a>
+            <a href="#video-share/golang"><img class="video-share" alt="" src="/static/image/video_share/golang.jpg" /></a>
+            <a href="#video-share/linux"><img class="video-share" alt="" src="/static/image/video_share/linux.jpg" /></a>
+        </div>
+    </div>
+</div>
+<!-- 首页结束 -->
 <div id="video-share-wrap" class="main-wrap video-share-wrap hide">
     <h1 class="nav-title">原创视频分享</h1>
     <div class="nav-item">
@@ -296,4 +341,57 @@
     </div>
     <!-- golang 结束 -->
 </div>
-<!-- 视频分享页结束 -->
+<!-- 视频分享页结束 --><div id="poetry-wrap" class="main-wrap poetry-wrap hide">
+    原创诗词页 待开发
+</div>
+<!-- 诗词页结束 -->
+<div id="about-wrap" class="main-wrap about-wrap hide">
+    <div class="intro">
+        <div class="label">🧑简介</div>
+        <div class="content">周华健 1992年12月 广东河源人</div>
+        <div class="label">🏫大学</div>
+        <div class="content">汕头大学</div>
+        <div class="label">📙喜欢的书籍</div>
+        <div class="content">Thinking in Java</div>
+        <div class="label">🎻喜欢的歌手</div>
+        <div class="content">Avril Lavigne</div>
+        <div class="label">🏀喜欢的运动</div>
+        <div class="content">篮球 羽毛球</div>
+        <div class="label">📔座右铭</div>
+        <div class="content">Time will tell everything</div>
+    </div>
+    <img class="avatar" src="/static/image/about/avatar.jpg" alt="" />
+</div>
+<!-- 关于页结束 --><div id="source-code-wrap" class="main-wrap source-code-wrap hide">
+    原创代码 小小礼物🎁 小小心意🎁 请笑纳<br />
+    完全免费 可学习、使用、散布等<br />
+    <a href='https://github.com/zhouhuajian-website/zhouhuajian-website' target="_blank" class="btn btn-deep-blue">网站源码Github</a><br />
+    当然也可回送一杯星巴克咖啡☕<br />
+    <a id="donate-btn" class="btn btn-deep-blue">打赏一杯星巴克咖啡</a><br />
+    Want to know how it make?<br />
+    click below! click! click!<br />
+    <a class="btn btn-deep-blue">网易云课堂</a>&nbsp;&nbsp;
+    <a class="btn btn-deep-blue">CSDN学院</a>&nbsp;&nbsp;
+    <a class="btn btn-deep-blue">腾讯课堂</a>&nbsp;&nbsp;
+</div>
+<div id="modal" class="modal"></div>
+<div id="donate-dialog" class="donate-dialog">
+    <img class="donate-qrcode" src="/static/image/source_code/alipay_20.jpg" alt="" />
+    <img class="donate-qrcode" src="/static/image/source_code/wechat_20.jpg" alt="" />
+</div>
+<!-- 网站源码页结束 --><div id="foot-wrap" class="foot-wrap hide">
+    made with a lot of ☕ and 🎵 by 周华健 in 东莞<br />
+    <a href='http://www.beian.miit.gov.cn/' target='_blank'>
+        粤ICP备20027999号-1
+    </a>
+</div>
+<!-- 通用尾部结束 --><script src="/static/js/jquery-3.5.0.min.js"></script>
+<script src="/static/js/index.js"></script>
+<script src="/static/js/head.js"></script>
+<script src="/static/js/home.js"></script>
+<script src="/static/js/video_share.js"></script>
+<script src="/static/js/about.js"></script>
+<script src="/static/js/source_code.js"></script>
+<script src="/static/js/foot.js"></script>
+</body>
+</html>
