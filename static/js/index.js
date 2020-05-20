@@ -28,19 +28,24 @@ function hashchange() {
     ) {
         page = matches[1];
     }
+
     // 访问页面
     $('.main-wrap').hide();
-    $('#foot-wrap').hide();
+    var $footWrap = $('#foot-wrap');
+    $footWrap.hide();
+
     if (page !== 'home') {
         $('#' + page + '-wrap').fadeIn(100);
     } else {
         $('#' + page + '-wrap').show();
         bannerResize();
     }
+
     // 首页和视频分享页面显示尾部
     if (['home', 'video-share'].indexOf(page) !== -1) {
-        $('#foot-wrap').show();
+        $footWrap.show();
     }
+
     // 视频分享页 处理锚点效果
     if (page === 'video-share' && matches[0].indexOf('/') !== -1) {
         $(document).scrollTop(function () {
@@ -49,6 +54,7 @@ function hashchange() {
         });
     }
 }
+
 // 绑定hashchange处理函数
 // 页面第一次加载调用一次
 window.onhashchange = hashchange;

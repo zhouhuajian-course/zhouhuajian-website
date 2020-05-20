@@ -39,6 +39,19 @@ a {
 .btn:hover {
     cursor: pointer;
 }
+
+/* 按钮不可用 */
+.btn.btn-disabled {
+    opacity: 70%;
+}
+.btn.btn-disabled:hover {
+    cursor: default;
+    border-color: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+/* 具体颜色按钮 */
 .btn-deep-blue {
     border-color: #254c5f;
     background: #ffffff;
