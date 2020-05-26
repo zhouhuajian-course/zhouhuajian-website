@@ -213,8 +213,12 @@ function append_extra_content(&$index_html) {
 　　　　　　　　　　　　　　　　　　　■　　　　　　　　　　　　　　　　　　　　
 
 
-人生若只如初见 何事秋风悲画扇
+Hi, nice to meet you!
 
+Interested in this website source code?
+Visit https://github.com/zhouhuajian-website/zhouhuajian-website.
+
+It is a gift for you.
 
 —————————————————————————————————————-->
 EXTRA_CONTENT;

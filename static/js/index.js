@@ -12,7 +12,7 @@ $(function() {
 // 路由系统
 var pages = [
     'home',
-    'video-share',
+    'course',
     'poetry',
     'about',
     'source-code'
@@ -41,13 +41,13 @@ function hashchange() {
         bannerResize();
     }
 
-    // 首页和视频分享页面显示尾部
-    if (['home', 'video-share'].indexOf(page) !== -1) {
+    // 首页和课程页面显示尾部
+    if (['home', 'course'].indexOf(page) !== -1) {
         $footWrap.show();
     }
 
-    // 视频分享页 处理锚点效果
-    if (page === 'video-share' && matches[0].indexOf('/') !== -1) {
+    // 课程页 处理锚点效果
+    if (page === 'course' && matches[0].indexOf('/') !== -1) {
         $(document).scrollTop(function () {
             var elem = document.getElementById(matches[1] + matches[2]);
             return $(elem).offset().top;

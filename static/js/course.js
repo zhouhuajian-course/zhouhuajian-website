@@ -1,5 +1,5 @@
 /**
- * 视频分享JS
+ * 课程JS
  *
  * @link    http://zhouhuajian.website
  * @package zhouhuajian.website
@@ -8,25 +8,25 @@
  */
 $(function() {
     $(window).resize(function () {
-        videoWrapResize();
+        courseWrapResize();
     });
 });
 
-videoWrapResize();
+courseWrapResize();
 
 // 视频分享页调整大小
-function videoWrapResize() {
+function courseWrapResize() {
     var windowWidth = $(window).width();
     var width = Math.min(
         1000,
         windowWidth
     );
-    var $videoShareWrap = $('#video_share-wrap');
-    $videoShareWrap.width(width + 'px');
+    var $courseShareWrap = $('#course-wrap');
+    $courseShareWrap.width(width + 'px');
     if (width === 1000) {
         var marginLeft = (windowWidth - 1000) / 2;
-        $videoShareWrap.css('margin-left', marginLeft + 'px');
+        $courseShareWrap.css('margin-left', marginLeft + 'px');
     } else  {
-        $videoShareWrap.css('margin-left', '0');
+        $courseShareWrap.css('margin-left', '0');
     }
 }
