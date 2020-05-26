@@ -218,7 +218,7 @@ Hi, nice to meet you!
 Interested in this website source code?
 Visit https://github.com/zhouhuajian-website/zhouhuajian-website.
 
-It is a gift for you.
+It's a gift for you.
 
 —————————————————————————————————————-->
 EXTRA_CONTENT;

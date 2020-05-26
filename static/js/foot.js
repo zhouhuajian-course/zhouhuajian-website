@@ -8,12 +8,10 @@
  */
 // 控制台个性化日志
 console.log(
-    // '\n' +
-    // '又一次莫名倚靠窗前\n' +
-    // '往事如风如烟若隐若现\n' +
-    // '那年那月的那一天\n' +
-    // '她轻挥小手说再见\n\n' +
-    // '—— written by zhouhuajian\n' +
-    // '—— original\n' +
-    // '—— published on 2020-05\n\n'
+    "Hi, nice to meet you!\n" +
+    "\n" +
+    "Interested in this website source code?\n" +
+    "Visit https://github.com/zhouhuajian-website/zhouhuajian-website.\n" +
+    "\n" +
+    "It's a gift for you."
 );
