@@ -1,18 +1,8 @@
-# 环境搭建
+# 阿里云ECS Ubuntu 18.04 环境搭建
 
 ### 更新apt
 
     apt-get update
-
-### 安装服务管理工具
-
-    增加sysv-rc-conf安装源
-    deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
-    
-    apt-get update
-    apt-get install sysv-rc-conf
-    
-    管理服务 关闭nginx mysql等的开机自启动
     
 ### 安装配置nginx
 
@@ -122,8 +112,8 @@
     测试前台运行
     /usr/sbin/nginx -g "daemon off;"
     /usr/sbin/php-fpm7.2 --nodaemonize
-    /usr/bin/mysqld_safe
-    # /usr/sbin/mysqld
+    /usr/sbin/mysqld
+    # /usr/bin/mysqld_safe
     mkdir /var/run/mysqld
     chown mysql:mysql /var/run/mysqld
     
@@ -140,7 +130,7 @@
     autorestart=true
     startsecs=10
     startretries=3
-    stdout_logfile=/tmp/supervisor_nginx.log
+    stdout_logfile=/var/log/supervisor/supervisor_nginx.log
     redirect_stderr=true
     [program:php-fpm7.2]
     command=/usr/sbin/php-fpm7.2 --nodaemonize
@@ -150,17 +140,29 @@
     autorestart=true
     startsecs=10
     startretries=3
-    stdout_logfile=/tmp/supervisor_php-fpm7.2.log
+    stdout_logfile=/var/log/supervisor/supervisor_php-fpm7.2.log
     redirect_stderr=true
-    [program:mysqld_safe]
-    command=/usr/bin/mysqld_safe
+    [program:mysqld]
+    command=/usr/sbin/mysqld
     process_name=%(program_name)s
     numprocs=1
     autostart=true
     autorestart=true
     startsecs=10
     startretries=3
-    stdout_logfile=/tmp/supervisor_mysqld_safe.log
+    stdout_logfile=/var/log/supervisor/supervisor_mysqld.log
     redirect_stderr=true
     
     service supervisor restart
+    pstree检查
+    关闭nginx mysql php-fpm的开机自启动
+    
+### 安装服务管理工具
+
+    增加sysv-rc-conf安装源
+    deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
+    
+    apt-get update
+    apt-get install sysv-rc-conf
+    
+    管理服务 关闭nginx mysql等的开机自启动
