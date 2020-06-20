@@ -4,6 +4,16 @@
 
     apt-get update
 
+### 安装服务管理工具
+
+    增加sysv-rc-conf安装源
+    deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
+    
+    apt-get update
+    apt-get install sysv-rc-conf
+    
+    管理服务 关闭nginx mysql等的开机自启动
+    
 ### 安装配置nginx
 
     安装nginx
@@ -15,6 +25,9 @@
     nginx -v
     netstat -anpt | grep 80
     ps -AHf | grep nginx 
+    http://39.99.150.120/
+    
+    配置阿里云防火墙
     
     配置nginx
     
@@ -40,22 +53,35 @@
     
     nginx -t 
     nginx -s reload
+    
+    cd / 
+    mdir www 
+    cd www 
+    mkdir zhouhuajian.website
+    
+    http://zhouhuajian.website/
 
-### 安装配置php php-fpm
+### 安装配置php-fpm
 
-    apt-get install php7.2
-    apt-get install php7.2-fpm
+    apt-get install php-fpm
     
     测试
     
-    service php-fpm restart
     netstat -anpt | grep 9000
     ps -AHf | grep php
-    php-fpm -b 127.0.0.1:9000
+    # php-fpm -b 127.0.0.1:9000
+    
+    FastCGI 9000
+    /etc/php/7.2/fpm/pool.d/www.conf
+    注释listen = /run/php/php7.2-fpm.sock
+    添加listen = 127.0.0.1:9000
+    
+    重启php-fpm
+    service php7.2-fpm restart
     
 ### 安装配置mysql 
 
-    apt install mysql-server mysql-client
+    apt-get install mysql-server mysql-client
     
     测试
     
@@ -74,13 +100,14 @@
     
     修改配置支持远程登录
     修改/etc/mysql/my.conf
+    /etc/mysql/mysql.conf.d/mysqld.cnf
     bind-address = 127.0.0.1
     改为bind-address = 0.0.0.0
     service mysql restart
     mysqld_safe 
     
     云服务器防火墙开启3306端口
-    
+   
     使用navicat测试
     
 ### 安装进程控制工具Supervisor
@@ -89,12 +116,24 @@
     
     退出nginx php-fpm mysql 
     service nginx stop
-    service php-fpm stop
+    service php7.2-fpm stop
     service mysql stop
     
+    测试前台运行
+    /usr/sbin/nginx -g "daemon off;"
+    /usr/sbin/php-fpm7.2 --nodaemonize
+    /usr/bin/mysqld_safe
+    # /usr/sbin/mysqld
+    mkdir /var/run/mysqld
+    chown mysql:mysql /var/run/mysqld
+    
+    
     配置supervisor
+    /etc/supervisor/conf.d/programs.conf
+    使用编辑器Shift+Tab消除空格
+    
     [program:nginx]
-    command=nginx -g "daemon off;"
+    command=/usr/sbin/nginx -g "daemon off;"
     process_name=%(program_name)s
     numprocs=1
     autostart=true
@@ -103,39 +142,25 @@
     startretries=3
     stdout_logfile=/tmp/supervisor_nginx.log
     redirect_stderr=true
-
-    [program:php-cgi]
-    command=php-cgi -b 127.0.0.1:9000
+    [program:php-fpm7.2]
+    command=/usr/sbin/php-fpm7.2 --nodaemonize
     process_name=%(program_name)s
     numprocs=1
     autostart=true
     autorestart=true
     startsecs=10
     startretries=3
-    stdout_logfile=/tmp/supervisor_php-cgi.log
-    redirect_stderr=true	
-
-    [program:mysqld]
-    command=mysqld
+    stdout_logfile=/tmp/supervisor_php-fpm7.2.log
+    redirect_stderr=true
+    [program:mysqld_safe]
+    command=/usr/bin/mysqld_safe
     process_name=%(program_name)s
     numprocs=1
     autostart=true
     autorestart=true
     startsecs=10
     startretries=3
-    stdout_logfile=/tmp/supervisor_mysqld.log
-    redirect_stderr=true	
+    stdout_logfile=/tmp/supervisor_mysqld_safe.log
+    redirect_stderr=true
     
     service supervisor restart
-    
-### 安装服务管理工具
-
-    增加sysv-rc-conf安装源
-    deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
-    
-    apt-get update
-    apt-get install sysv-rc-conf
-    
-    管理服务 关闭nginx mysql等的开机自启动
-    
-    
