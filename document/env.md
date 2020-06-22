@@ -100,6 +100,18 @@
    
     使用navicat测试
     
+### 服务管理工具sysv-rc-conf
+
+    增加sysv-rc-conf安装源
+    deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
+    
+    apt-get update
+    apt-get install sysv-rc-conf
+    
+### 进程管理工具htop
+
+    apt-get install htop
+    
 ### 安装进程控制工具Supervisor
 
     apt-get install supervisor
@@ -155,14 +167,6 @@
     
     service supervisor restart
     pstree检查
-    关闭nginx mysql php-fpm的开机自启动
+    sysv-rc-conf关闭nginx mysql php-fpm的开机自启动
     
-### 安装服务管理工具
-
-    增加sysv-rc-conf安装源
-    deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
     
-    apt-get update
-    apt-get install sysv-rc-conf
-    
-    管理服务 关闭nginx mysql等的开机自启动
