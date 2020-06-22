@@ -1,6 +1,6 @@
 # 阿里云ECS Ubuntu 18.04 代码发布
 
-### Git代码发布
+### Git的方式发布代码
 
     sudo apt-get install git
     git --version
@@ -18,7 +18,7 @@
     
     设置github访问权限
     
-    邮件可随便填
+    备注可随便写
     ssh-keygen -t rsa -C "test@test.com"
     cd ~/.ssh
     cat id_rsa.pub
@@ -26,7 +26,49 @@
     
     git clone git@github.com:zhouhuajian-website/zhouhuajian-website.git zhouhuajian.website
     
+### SCP的方式发布代码
 
+    scp -r * root@39.99.150.120:/www/test.com
+    scp -r C:\Users\zhouhuajian\test.com\* root@39.99.150.120:/www/test.com
+    
+### FTP的方式发布代码
 
+    apt-get install vsftpd
+    修改配置
+    vim /etc/vsftpd.conf
+    
+    末尾添加
+    
+    anonymous_enable=NO               # 不允许匿名用户登录 
+    local_enable=YES                  # 允许本地用户登录 
+    local_root=/www/zhouhuajian.cn    # 当本地用户登入时，将被更换到定义的目录下，默认值为各用户的家目录
+    write_enable=YES                  # 允许登陆用户有写权限
+    allow_writeable_chroot=YES        # 允许更换的到目录有写权限 默认情况下，出于安全原因，VSFTPD 不允许chroot目录具有可写权限 
+    pasv_enable=YES                   # 允许PASV工作模式 
+                                      # 限制PASV模式的端口范围是为了配合阿里云防火墙设置 
+                                      # 如是是不限制，使用随机端口，那么阿里云防火墙没开对应端口会连接失败
+    pasv_min_port=40000               # 在PASV工作模式下，数据连接可以使用的端口范围的最小端口
+    pasv_max_port=50000               # 在PASV工作模式下，数据连接可以使用的端口范围的最大端口
+    
+    # 添加专门ftp操作的用户
+    useradd user_for_ftp
+    passwd user_for_ftp
+    
+    # 将目录设置成可写或者将目录所有者给user_for_ftp
+    chmod a+w /www/zhouhuajian.cn
+    或者
+    chown user_for_ftp zhouhuajian.cn
+    
+    阿里云防火墙开放21 20 40000-50000端口
+    
+    下载FlashFXP连接 操作
+    https://www.flashfxp.com/
+    
+    站点-》站点管理-》新建站点
+    左侧本地文件浏览器 右侧远程服务器文件浏览器
     
     
+
+
+
+
