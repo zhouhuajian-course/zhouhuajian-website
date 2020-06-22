@@ -33,6 +33,8 @@
     
 ### FTP的方式发布代码
 
+    https://baike.baidu.com/item/ftp/13839
+
     apt-get install vsftpd
     修改配置
     vim /etc/vsftpd.conf
