@@ -33,7 +33,7 @@
     
 ### FTP的方式发布代码
 
-    https://baike.baidu.com/item/ftp/13839
+    https://baike.baidu.com/item/FTP%E5%8D%8F%E8%AE%AE/7651119?fr=aladdin
 
     apt-get install vsftpd
     修改配置
