@@ -26,6 +26,13 @@
     
     git clone git@github.com:zhouhuajian-website/zhouhuajian-website.git zhouhuajian.website
     
+    windows Git 
+    https://git-scm.com/
+    
+    环境变量 文件资源浏览器-》此电脑-》右键属性-》高级系统设置-》环境变量 
+    上面是用户环境变量 下面是系统环境变量
+    点击系统环境变量的Path -》编辑
+    
 ### SCP的方式发布代码
 
     scp -r * root@39.99.150.120:/www/test.com
