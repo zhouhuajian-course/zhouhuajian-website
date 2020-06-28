@@ -9,7 +9,7 @@
     
     git config --global user.name "zhouhuajian"
     邮件可随便填
-    git config --global user.email "test@zhouhuajian.website"
+    git config --global user.email "test@zhouhuajian.com"
     
     cd / 
     mkdir www
