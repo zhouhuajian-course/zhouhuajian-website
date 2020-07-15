@@ -1,14 +1,19 @@
 # 阿里云ECS Ubuntu 18.04 环境搭建
 
-### 更新apt
+### apt
 
-    apt-get update
+    Advanced Packaging Tool
+    https://help.ubuntu.com/18.04/serverguide/apt.html
+
+### 更新软件索引
+
+    apt update
     
 ### 安装配置nginx
 
     安装nginx
 
-    apt-get install nginx
+    apt install nginx
     
     测试是否安装成功
     
@@ -53,7 +58,7 @@
 
 ### 安装配置php-fpm
 
-    apt-get install php-fpm
+    apt install php-fpm
     
     测试
     
@@ -71,7 +76,7 @@
     
 ### 安装配置mysql 
 
-    apt-get install mysql-server mysql-client
+    apt install mysql-server mysql-client
     
     测试
     
@@ -105,16 +110,16 @@
     增加sysv-rc-conf安装源
     deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse
     
-    apt-get update
-    apt-get install sysv-rc-conf
+    apt update
+    apt install sysv-rc-conf
     
 ### 进程管理工具htop
 
-    apt-get install htop
+    apt install htop
     
 ### 安装进程控制工具Supervisor
 
-    apt-get install supervisor
+    apt install supervisor
     
     退出nginx php-fpm mysql 
     service nginx stop
