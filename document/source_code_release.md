@@ -2,7 +2,7 @@
 
 ### Git的方式发布代码
 
-    sudo apt-get install git
+    sudo apt install git
     git --version
     
     设置Git
@@ -19,7 +19,7 @@
     设置github访问权限
     
     备注可随便写
-    ssh-keygen -t rsa -C "test@test.com"
+    ssh-keygen
     cd ~/.ssh
     cat id_rsa.pub
     复制到github设置的ssh 名称可随便填
@@ -42,7 +42,7 @@
 
     https://baike.baidu.com/item/FTP%E5%8D%8F%E8%AE%AE/7651119?fr=aladdin
 
-    apt-get install vsftpd
+    apt install vsftpd
     修改配置
     vim /etc/vsftpd.conf
     
@@ -55,8 +55,8 @@
     allow_writeable_chroot=YES        # 允许更换的到目录有写权限 默认情况下，出于安全原因，VSFTPD 不允许chroot目录具有可写权限 
     # 限制PASV模式的端口范围是为了配合阿里云防火墙设置 
     # 如是是不限制，使用随机端口，那么阿里云防火墙没开对应端口会连接失败
-    pasv_min_port=40000               # 在PASV工作模式下，数据连接可以使用的端口范围的最小端口
-    pasv_max_port=50000               # 在PASV工作模式下，数据连接可以使用的端口范围的最大端口
+    pasv_min_port=30000               # 在PASV工作模式下，数据连接可以使用的端口范围的最小端口
+    pasv_max_port=31000               # 在PASV工作模式下，数据连接可以使用的端口范围的最大端口
     
     # 添加专门ftp操作的用户 创建家目录
     useradd --create-home user_ftp
@@ -67,7 +67,7 @@
     或者
     chown user_ftp zhouhuajian.cn
     
-    阿里云防火墙开放21 20 40000-50000端口
+    阿里云防火墙开放21 20 30000-31000端口
     
     下载FlashFXP连接 操作
     https://www.flashfxp.com/
